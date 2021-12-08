@@ -7,11 +7,8 @@
         <div class="center-screen d-flex flex-column justify-content-center align-items-center">
 
             @if ($errors->any())
-                <div>
-                    <p>Essas credenciais não batem com nossos registros</p>
-                </div>
+                <p>Essas credenciais não batem com nossos registros</p>
             @endif
-
 
             @if (session('status'))
                 <div class="mb-4 font-medium text-sm text-green-600">
