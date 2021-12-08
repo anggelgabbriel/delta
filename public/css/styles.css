@@ -31,12 +31,16 @@ body {
     color: #FFF;
 }
 
+.d-btn-full {
+    width: 100%;
+}
+
 .d-btn-primary {
     background: linear-gradient(94.01deg, #4F66FF 0%, #0B23AD 100%);
     border: transparent;
 }
 
-.bottom{
+.bottom {
     display: flex;
     width: 560px;
     flex-direction: row;
@@ -44,3 +48,12 @@ body {
     align-items: center;
 }
 
+
+.form-in {
+    width: 400px;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 24px rgb(0 0 0 / 25%);
+    background: linear-gradient(
+        127.57deg, rgba(255, 255, 255, 0.4) 5.37%, rgba(255, 255, 255, 0.1) 72.64%);
+}
