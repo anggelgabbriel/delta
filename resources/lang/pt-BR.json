@@ -3,5 +3,7 @@
     "Password": "Senha",
     "Remember me": "Lembrar",
     "Forgot your password?": "Esqueceu sua senha?",
-    "Log in": "Entrar"
+    "Log in": "Entrar",
+    "The password must be at least 8 characters.": "A senha deve ter pelo menos 8 caracteres.",
+    "The password confirmation does not match.": "A confirmação de senha não confere"
 }
