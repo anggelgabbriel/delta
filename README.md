@@ -1,6 +1,6 @@
 <p align="center"><a href="http://deltacovid.herokuapp.com" target="_blank">
 
-<img src="https://i.ibb.co/zs7FfG5/ndice.jpg" alt="Delta Project" width="200" height="300">
+[![Delta-Covid.jpg](https://i.postimg.cc/2j1XJ1Mn/Delta-Covid.jpg)](https://postimg.cc/4nT5HxJ3)
 </a>
 </p>
 
