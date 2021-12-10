@@ -10,7 +10,7 @@
                 <img src="images/logo.svg" alt="" style="">
             </a>
         </div>
-s
+
         <div class="form-in">
             <p class="text-center">Preencha os campos abaixo</p>
             @if ($errors->any())
