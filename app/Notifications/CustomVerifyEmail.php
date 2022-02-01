@@ -7,6 +7,7 @@ use Illuminate\Notifications\Notification;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Lang;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\URL;
 
 class CustomVerifyEmail extends Notification
@@ -18,7 +19,6 @@ class CustomVerifyEmail extends Notification
      */
     public static $createUrlCallback;
 
-    public $user;
     /**
      * The callback that should be used to build the mail message.
      *
@@ -26,12 +26,6 @@ class CustomVerifyEmail extends Notification
      */
     public static $toMailCallback;
 
-
-
-    public function __construct($user)
-    {
-        $this->user=$user;
-    }
     /**
      * Get the notification's channels.
      *
@@ -68,17 +62,12 @@ class CustomVerifyEmail extends Notification
      */
     protected function buildMailMessage($url, $notifiable)
     {
-        error_log('test');
-        error_log($this->user);
-
-//        return (new MailMessage)->view(
-//            'emails.name', ['name' => $this->user->name]
-//        );
         return (new MailMessage)
-            ->line(Lang::get('Eduardo.@'. $notifiable->name . 'aqui'))
+            ->line(Lang::get($notifiable->name))
+            ->subject(Lang::get('Verify Email Address'))
             ->line(Lang::get('Please click the button below to verify your email address.'))
-            ->action(Lang::get('Verify Email Address'), $url)
-            ->line(Lang::get('If you did not create an account, no further action is required.'));
+            ->line(Lang::get('If you did not create an account, no further action is required.'))
+            ->action(Lang::get('Verify Email Address'), $url);
     }
 
     /**

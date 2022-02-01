@@ -12,12 +12,23 @@
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('css/styles.css') }}">
+        <link rel="stylesheet" href="{{ URL::asset('css/circles.css') }}">
 
         <!-- Scripts -->
         <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     <body>
+
+
         <div class="font-sans text-gray-900 antialiased">
+            <div class='box'>
+                <div class='box1'></div>
+            </div>
+
+            <div class='box3'>
+                <div class='box4'></div>
+            </div>
             {{ $slot }}
         </div>
     </body>

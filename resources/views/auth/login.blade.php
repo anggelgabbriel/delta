@@ -2,11 +2,24 @@
 
 @section('title', 'Login')
 
+@section('link')
+    <link rel="stylesheet" href="/css/login-circles.css">
+@endsection
+
 @section('content')
+
+    <div class='box'>
+        <div class='box1'></div>
+    </div>
+
+    <div class='box3'>
+        <div class='box4'></div>
+    </div>
+
     <div class="center-screen d-flex flex-column justify-content-center align-items-center">
         <div class="auth-logo">
             <a href="/">
-                <img src="images/logo.svg" alt="" style="">
+                <img src="images/logo.svg" alt="">
             </a>
         </div>
 
@@ -15,6 +28,7 @@
                 {{ session('status') }}
             </div>
         @endif
+
 
         <div class="form-in">
             <p class="text-center">Preencha os campos abaixo</p>
@@ -37,19 +51,14 @@
                                  name="email" :value="old('email')" required autofocus/>
                 </div>
 
+
                 <div class="form-group mt-2">
                     <x-jet-label for="password" value="Senha"/>
                     <x-jet-input class="form-control mt-1" type="password"
                                  placeholder="Digite a sua senha"
                                  name="password" :value="old('password')" required autocomplete="current-password"/>
                 </div>
-
-                <div class="form-check mt-2">
-                    <x-jet-checkbox class="form-check-input" name="remember"/>
-                    <label class="form-check-label" for="remember">Lembrar</label>
-                </div>
-
-                <button type="submit" class="mt-2 btn d-btn d-btn-full d-btn-primary">Entrar</button>
+                <button type="submit" class="mt-4 btn d-btn d-btn-full d-btn-primary">Entrar</button>
             </form>
             <div class="d-flex mt-2">
                 @if (Route::has('password.request'))
@@ -61,5 +70,16 @@
             </div>
         </div>
     </div>
+    <style>
+        body {
+            overflow: hidden;
+        }
+
+        label {
+            margin-left: 15px;
+        }
+
+
+    </style>
 @endsection
 

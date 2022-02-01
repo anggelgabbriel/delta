@@ -22,3 +22,6 @@ quantos testes foram realizados, quantos testaram positivos para COVID-19, e dos
 variante DELTA. 
 
 
+- Protótipo do Design das Telas feitos no Figma:
+https://www.figma.com/proto/vEs6dofhX4YBlAjgzZ1iJp/Delta?page-id=0%3A1&node-id=8%3A2&viewport=241%2C48%2C0.13&scaling=contain&starting-point-node-id=8%3A2&show-proto-sidebar=1
+

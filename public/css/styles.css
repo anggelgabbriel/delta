@@ -4,6 +4,10 @@ body {
     font-family: 'Darker Grotesque', sans-serif;
 }
 
+.container-fluid{
+    font-family: 'Darker Grotesque', sans-serif;
+}
+
 .welcome {
     margin-top: 10px;
     font-weight: 900;
@@ -28,6 +32,14 @@ body {
     box-sizing: border-box;
     border-radius: 300px;
     padding: 10px 70px 14px 70px;
+    color: #FFF;
+}
+
+.d-btn-sm {
+    border: 1px solid #4F66FF;
+    box-sizing: border-box;
+    border-radius: 300px;
+    padding: 7px 50px;
     color: #FFF;
 }
 
@@ -67,3 +79,20 @@ body {
 .auth-logo img{
     width: 80px;
 }
+
+
+
+body{
+
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    color: #fff!important;
+    border: 2px solid #fff !important;
+    padding: 15px !important;
+    background-color: transparent !important;
+    border-radius: 100px !important;
+}
+

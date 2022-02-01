@@ -61,6 +61,16 @@ body {
     sans-serif,
     'Apple Color Emoji',
     'Segoe UI Emoji';
+    -webkit-text-size-adjust: none;
+
+    background-color: #0C082B;
+    color: #718096;
+    height: 100%;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+    width: 100% !important;
+
 }
 
 /*
