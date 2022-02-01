@@ -14,7 +14,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+//    return view('welcome1');
     return view('welcome');
+});
+
+
+Route::get('/notification', function () {
+    $user = auth()->user();
+
+    error_log("aehiauehiauheuiahneiuashneiusaeh");
+    return (new \App\Notifications\CustomVerifyEmail($user))
+        ->toMail($user);
+//    return (new InvoicePaid($invoice))
+//        ->toMail($invoice->user);
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

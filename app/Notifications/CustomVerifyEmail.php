@@ -18,6 +18,7 @@ class CustomVerifyEmail extends Notification
      */
     public static $createUrlCallback;
 
+    public $user;
     /**
      * The callback that should be used to build the mail message.
      *
@@ -25,6 +26,12 @@ class CustomVerifyEmail extends Notification
      */
     public static $toMailCallback;
 
+
+
+    public function __construct($user)
+    {
+        $this->user=$user;
+    }
     /**
      * Get the notification's channels.
      *
@@ -61,17 +68,17 @@ class CustomVerifyEmail extends Notification
      */
     protected function buildMailMessage($url, $notifiable)
     {
-        error_log($notifiable);
+        error_log('test');
+        error_log($this->user);
 
-        return (new MailMessage)->view(
-            'emails.name', ['name' => $notifiable->name]
-        );
-//        return (new MailMessage)
-//            ->line(Lang::get('Eduardo.@'. $notifiable->name . 'aqui'))
-//            ->subject(Lang::get('Verify Email Address'))
-//            ->line(Lang::get('Please click the button below to verify your email address.'))
-//            ->action(Lang::get('Verify Email Address'), $url)
-//            ->line(Lang::get('If you did not create an account, no further action is required.'));
+//        return (new MailMessage)->view(
+//            'emails.name', ['name' => $this->user->name]
+//        );
+        return (new MailMessage)
+            ->line(Lang::get('Eduardo.@'. $notifiable->name . 'aqui'))
+            ->line(Lang::get('Please click the button below to verify your email address.'))
+            ->action(Lang::get('Verify Email Address'), $url)
+            ->line(Lang::get('If you did not create an account, no further action is required.'));
     }
 
     /**
