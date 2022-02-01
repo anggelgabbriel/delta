@@ -7,6 +7,7 @@ use Illuminate\Notifications\Notification;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Lang;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\URL;
 
 class CustomVerifyEmail extends Notification
@@ -61,17 +62,12 @@ class CustomVerifyEmail extends Notification
      */
     protected function buildMailMessage($url, $notifiable)
     {
-        error_log($notifiable);
-
-        return (new MailMessage)->view(
-            'emails.name', ['name' => $notifiable->name]
-        );
-//        return (new MailMessage)
-//            ->line(Lang::get('Eduardo.@'. $notifiable->name . 'aqui'))
-//            ->subject(Lang::get('Verify Email Address'))
-//            ->line(Lang::get('Please click the button below to verify your email address.'))
-//            ->action(Lang::get('Verify Email Address'), $url)
-//            ->line(Lang::get('If you did not create an account, no further action is required.'));
+        return (new MailMessage)
+            ->line(Lang::get($notifiable->name))
+            ->subject(Lang::get('Verify Email Address'))
+            ->line(Lang::get('Please click the button below to verify your email address.'))
+            ->line(Lang::get('If you did not create an account, no further action is required.'))
+            ->action(Lang::get('Verify Email Address'), $url);
     }
 
     /**
